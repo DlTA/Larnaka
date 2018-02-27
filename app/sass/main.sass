@@ -1,0 +1,650 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+// == MIXINS
+
+=circle($radius)
+	width: $radius
+	height: $radius
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	-o-border-radius: 50%
+	border-radius: 50%
+
+// == COMMON
+*,
+*:focus,
+*:hover,
+*:active,
+*::-moz-focus-inner,
+	outline: 0 !important
+
+html
+	height: 100%
+	padding: 0
+	overflow-x: hidden
+	overflow-y: scroll
+	font-size: 15px
+
+body
+	margin: 0
+	padding: 0
+	min-height: 100%
+	color: $font-color
+	font-family: $font-stack
+	font-weight: 400
+	background: 0 0
+
+h1, h2, h3, h4, h5, h6
+	color: $head-font-color
+
+img
+	opacity: 1
+	transition: opacity 0.3s
+
+img[data-src]
+	opacity: 0
+
+#wrapper
+	width: 100%
+	height: 100%
+	margin: 0 auto
+	padding: 0
+	overflow-x: hidden
+	background-color: transparent
+
+// == ICONS
+.far, 
+.fab,
+.fas
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	display: inline-block
+	font-style: normal
+	font-variant: normal
+	text-rendering: auto
+	line-height: 1
+	vertical-align: -15%
+.far
+	font-family: 'Font Awesome 5 Regular'
+	font-weight: 400
+.fab
+	font-family: 'Font Awesome 5 Brands'
+.fas
+	font-family: 'Font Awesome 5 Solid'
+
+.fa-vk::before
+	content: "\f189"
+
+.fa-facebook-f::before
+	content: "\f39e"
+
+.fa-viber::before
+	content: "\f409"
+
+.fa-whatsapp::before
+	content: "\f232"
+
+.fa-car::before
+	content: "\f1b9"
+
+.fa-euro-sign::before
+	content: "\f153"
+
+.fa-umbrella::before
+	content: "\f0e9"
+
+.fa-thumbs-up::before
+	content: "\f164"
+
+.fa-caret-down::before
+	content: "\f0d7"
+
+.fa-calendar-alt::before
+	content: "\f073"
+
+.fa-map-marker-alt::before
+	content: "\f3c5"
+
+.fa-heart::before
+	content: "\f004"
+
+.fa-clock::before
+	content: "\f017"
+
+.fa-road::before
+	content: "\f018"
+
+.fa-filter::before
+	content: "\f0b0"
+
+.fa-chart-line::before
+	content: "\f201"
+
+.fa-cog::before
+	content: "\f013"
+
+.fa-male::before
+	content: "\f183"
+
+.fa-tachometer-alt::before
+	content: "\f3fd"
+
+.fa-quote-left::before
+	content: "\f10d"
+
+.fa-chevron-left::before
+	content: "\f053"
+
+.fa-chevron-right::before
+	content: "\f054"
+
+.fa-snowflake::before
+	content: "\f2dc"
+
+.fa-plus::before
+	content: "\f067"
+
+.fa-minus::before
+	content: "\f068"
+
+.fa-home::before
+	content: "\f015"
+
+.fa-phone::before
+	content: "\f095"
+
+.fa-envelope::before
+	content: "\f0e0"
+
+.def-list
+	margin: 0
+	padding: 0
+	overflow: hidden
+	list-style-type: none
+	text-align: center	
+
+	li
+		a
+			text-decoration: none
+
+// == HEADLINE
+@import "header"
+
+// == CONTENT
+.header-wrap
+	position: relative
+	width: 100%
+	height: auto
+	background-position: center center
+	background-repeat: no-repeat
+	background-attachment: scroll
+	background-size: cover
+	-moz-background-size: cover
+	-webkit-background-size: cover
+	background-color: #E0E0E0
+	background-image: url('/img/bg-1920.jpg')
+	min-height: 600px
+	margin-top: 60px
+
+	&::before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		right: 0
+		background-color: rgba(0, 0, 0, .2)
+	h1
+		position: relative
+		margin: 0
+		padding: 45px 0 15px 90px
+		text-align: left
+		text-transform: uppercase
+		font-family: $font-bold
+		font-size: 3.5rem
+		color: #fff
+
+		span
+			display: block
+			font-family: $font-light
+			text-transform: none
+			font-size: 2rem
+			line-height: 3rem
+
+h2, h4
+	text-align: center
+
+h2
+	padding: 2rem 0
+	margin: 0
+
+h4
+	margin: 0 0 1rem
+
+.hover
+	background-color: rgba(255,255,255,0.2)
+	border: 1px solid rgba(255,255,255, 0.5)
+	transition: background-color ease-in-out 0.15s
+
+.hover-2
+	background-color: $secondary
+	transition: background-color ease-in-out 0.15s
+
+.btn
+	display: block
+	position: relative
+	text-decoration: none
+	border: none
+	margin: 1rem auto
+	cursor: pointer
+	border: 1px solid rgba(255,255,255,0)
+	background-color: $accent
+	color: #fff
+
+.btn-lg
+	padding: 0.8rem 2.5rem
+	text-transform: uppercase
+	font-weight: 600
+	font-size: 14px
+
+	&:hover
+		@extend .hover
+
+.btn-md,
+.btn-md-2
+	width: 100px
+	font-size: 10px
+	font-weight: 600
+	text-transform: uppercase
+	letter-spacing: 1px
+	margin: 0 auto
+
+.btn-md
+	padding: 0.5rem 1.2rem
+	&:hover
+		@extend .hover-2
+
+.btn-md-2
+	padding: 0.5rem
+	&:hover
+		@extend .hover
+
+
+@import "form"
+
+// == ABOUT
+.bonus-box,
+.hits-box
+	position: relative
+	color: $head-font-color
+	text-align: center
+
+.bonus-box
+	margin-top: 1.5rem
+	h4
+		margin: .6rem 0 0 0
+		font-size: 1.2rem
+		font-weight: normal
+	p
+		color: $font-color
+		line-height: 1.3rem
+
+.bonus
+	padding: 0 0 2rem
+
+.bonus-icon
+	display: inline-block
+	+circle(90px)
+	line-height: 90px
+	border: 1px solid $head-font-color
+	text-align: center
+
+	i
+		font-size: 2rem
+
+.hits-box
+	margin: 1.5rem 0
+.hit
+	padding: 1rem
+
+	h4
+		font-size: 1.5rem
+		margin: 1rem 0
+	i
+		font-size: 2rem
+		color: $accent
+
+	p
+		font-size: 0.9rem
+		margin: 0 auto
+
+.about-img
+	img
+		width: 100%
+		height: auto
+.about-txt
+	p
+		text-indent: 1rem
+
+// == CARS
+#cars
+	background-color: #FBFBFB
+
+#current-loc
+	display: none
+	position: relative
+	width: 90%
+	margin: 0 auto
+	padding: 1rem
+	font-size: 1.1rem
+	text-align: center
+	color: $head-font-color
+	font-weight: 600
+	cursor: pointer
+	border: 1px solid $accent-font-color
+	background-color: #fff
+	
+	&.up,
+	&.down
+		&::before
+			position: absolute
+			right: 1rem
+	&.up
+		&::before
+			content: "\25B2"
+	&.down
+		&::before
+			content: "\25BC"
+
+.tabs
+	position: relative
+
+.tabs-list
+	@extend .def-list
+	position: relative
+	font-weight: 600
+	transform: translateZ(0)
+	transition: max-height linear 0.15s
+	li
+		display: inline
+		white-space: nowrap
+		a
+			display: inline-block
+			padding: 1rem 3.75rem
+			margin-right: 0.5rem
+			font-size: 1.2rem
+			color: inherit
+			background-color: $secondary
+			transition: color ease-in-out 0.15s
+
+			&:hover
+				color: #fff
+
+		a.active
+			color: #fff
+			background-color: $accent
+			cursor: default
+
+	&.show
+		max-height: 18rem
+
+.car-wrapper
+	position: relative
+	margin-bottom: 2rem
+
+.car-card
+	position: relative
+	margin-top: 1rem
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1)
+	background-color: #fff
+
+	img
+		width: 100%
+		height: auto
+	
+	.caption
+		text-align: center
+
+		.price
+			span
+				font-size: 0.8rem
+
+		table
+			width: 100%
+			max-width: 100%
+			margin-top: 1rem
+			border-spacing: 0
+			border-collapse: collapse
+
+			td
+				width: 25%
+				padding: 8px 0
+				font-size: 12px
+				border-top: 1px solid #e9e9e9
+				vertical-align: bottom
+				
+				&:not(:first-child)
+					border-left: 1px solid #e9e9e9
+
+				i
+					margin-right: 4px
+
+// == OWL CAROUSEL
+.owl-prev,
+.owl-next,
+	position: absolute
+	top: 0
+	width: 50px
+	height: 100%
+	text-align: center
+	font-size: 2rem
+	background-color: transparent
+	transition: color ease-in-out 0.15s
+	
+	&:hover
+		color: #fff
+		box-shadow: 0 1px 2px rgba(0,0,0,0.1)
+
+	i
+		position: relative
+		top: 50%
+		transform: translateY(calc(-50% - 50px))
+
+
+.owl-next
+	right: -40px
+	padding-left: 0.5rem
+.owl-prev
+	left: -40px
+	padding-right: 0.5rem
+
+.owl-dots
+	position: relative
+	left: 0
+	bottom: 0
+	height: auto
+	width: 100%
+	padding: 1rem
+	text-align: center
+	
+.owl-dot
+	display: inline-block
+	+circle(8px)
+	background-color: $font-color
+	margin-right: 0.7rem
+
+.owl-dot.active
+	background-color: $accent
+
+// == REVIEWS
+#reviews
+	background-color: $secondary
+
+	h2
+		color: #fff
+.item
+	position: relative
+	color: $accent-font-color
+	// max-height: 420px
+	margin: 0 1rem
+	background-color: $secondary
+
+.review
+	position: relative
+	overflow: hidden
+	padding: 0
+	// color: #ebebeb
+
+	i
+		&::before
+			font-size: 1.2rem
+			width: 10%
+			float: left
+			padding-top: 1rem
+			padding-left: 1rem
+
+.review-img
+	position: relative
+
+.u-name
+	width: 85%
+	float: right
+	color: #fff
+	font-weight: 600
+	text-align: center
+	margin: 0
+	padding: 1rem 1rem 1rem 0
+
+.review-text
+	font-size: 0.9rem
+	line-height: 1.2rem
+	text-indent: 1rem
+	float: right
+	margin: 0
+	width: 90%
+	max-height: 9.6rem // 1.2rem * 8 lines
+
+.cute-text
+	&::before
+		content: ""
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 90%
+		height: 1.2rem
+		background: linear-gradient(180deg, rgba(37,37,37,0.3), $secondary)
+	&:hover
+		max-height: 300px
+		&::before
+			background: inherit
+
+.review-text.cute-text
+	transition: max-height ease-in-out 0.15s, background ease-in-out 0.15s
+
+// == FAQ
+@import "faq"
+
+// == FOOTER
+footer
+	padding: 2rem 0 0
+	background-color: $secondary
+
+	h4
+		color: #fff
+
+	.#{$socClass}
+		display: inline
+		margin-top: 1rem
+		width: 100%
+
+	.#{$socListClass}
+		padding-left: 40%
+		text-align: left
+		padding-top: 0.5rem
+
+		li
+
+			.#{$socItemClass}
+				margin-right: 0.5rem
+				font-size: 1.3rem
+				+circle(36px)
+				line-height: 36px
+				color: $head-font-color
+				background-color: $font-color
+				transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s
+
+				i
+					vertical-align: 0
+
+				&:hover
+					color: #fff
+
+			a[href*="vk"]:hover
+				background-color: $vk-color
+			a[href*="facebook"]:hover
+				background-color: $fb-color
+			a[href*="viber"]:hover
+				background-color: $viber-color
+			a[href*="whatsapp"]:hover
+				background-color: $whatsapp-color
+
+.contact-list,
+.filial-list
+	@extend .def-list
+	li
+		text-align: left
+
+		i, p, a
+			display: inline-block
+			font-size: 1rem
+
+		i, a
+			transition: color ease-in-out 0.15s
+
+		&:last-child
+				margin-bottom: 1.5rem
+
+		&:hover i
+			color: #fff
+
+.contact-list
+	li
+		i
+			padding: 1rem 1rem 1rem 2.5rem	
+
+		p
+			text-align: left
+			width: 100%
+			padding: 0.5rem 0
+
+.filial-list
+	padding-left: 35%
+	li
+		i
+			padding: 0.5rem 1rem 0.5rem 0.5rem
+
+		a
+			color: $font-color
+			border-bottom: 1px solid $font-color
+
+		&:hover 
+			a
+				color: #fff
+			i
+				color: $accent
+
+.footer-line
+	margin-top: 1rem
+	border-top: 1px solid $font-color
+	padding: 1rem 0
+	p
+		margin: 0
+		font-size: 0.85rem
+		line-height: 1.2rem
+		text-align: center
+		// color: #fff
+
+@import "media" // Всегда в конце

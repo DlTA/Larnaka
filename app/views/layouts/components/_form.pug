@@ -1,0 +1,136 @@
+// <Form>
+section#form
+	.container-fluid
+		form#rentForm(method="POST")
+			//<Row 1>
+			.row
+				// City
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="cityMenu") Выберите город
+						select(name="city" id="cityMenu")
+							option(value="") Айя-Напа
+							option(value="", selected) Ларнака
+							option(value="") Лимасол
+							option(value="") Пафос   
+							option(value="") Протарас
+						i.fas.fa-caret-down
+				// Transport
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="transportMenu") Транспортное средство
+						select(name="transport" id="transportMenu")
+							option(value="", selected) Автомобили
+						i.fas.fa-caret-down
+				// Model
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="modelMenu") Выберите марку
+						select(name="model" id="modelMenu")
+							option(value="", disabled, selected) &emsp;—
+						i.fas.fa-caret-down
+				// Place
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="placeMenu") Место подачи
+						select(name="place" id="placeMenu")
+							option(value="", disabled, selected) &emsp;—
+							option(value="") Аэропорт
+							option(value="") Отель
+							option(value="") Другое
+						i.fas.fa-caret-down
+			// </Row 1>
+
+			// <Row 2>
+			.row
+				// Check In
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="checkInDate") Дата и время начала аренды
+						input(type="text", name="checkIn", id="checkInDate", readonly)
+						i.far.fa-calendar-alt
+				// Check Out	
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="checkOutDate") Дата и время возврата
+						input(type="text", name="checkOut", id="checkOutDate", readonly)
+						i.far.fa-calendar-alt
+
+				.col-lg-3.col-md-6.col-xs-12
+					.row
+						.col-xs-4.sm
+							// Days
+							label(for="fullDays") Дней
+							input(type="text", name="days", id="fullDays", readonly)
+						.col-xs-4.sm
+							// Age
+							.form-input
+								label(for="ageMenu") Возраст
+								select(name="age" id="ageMenu")
+									option(value="", disabled, selected) &emsp;—
+									option(value="") 18
+									option(value="") 19
+									option(value="") 20
+								i.fas.fa-caret-down
+						.col-xs-4.sm
+							// Experience
+							.form-input
+								label(for="expMenu") Стаж
+								select(name="exp" id="expMenu")
+									option(value="", disabled, selected) &emsp;—
+									option(value="") 18
+									option(value="") 19
+									option(value="") 20
+								i.fas.fa-caret-down
+
+				.col-lg-3.col-md-6.col-xs-12
+					.form-input
+						label(for="insuranceMenu") Тип страхования
+						select(name="insurance" id="insuranceMenu")
+							option(value="", disabled, selected) &emsp;—
+						i.fas.fa-caret-down
+			//</Row 2>
+
+			//<Row 3>
+			.row
+				.col-lg-3.col-md-6.col-xs-12
+					label(for="surname") Фамилия
+					input(type="text", name="surname", id="surname")
+				.col-lg-3.col-md-6.col-xs-12
+					label(for="name") Имя
+					input(type="text", name="name", id="name")
+				.col-lg-3.col-md-6.col-xs-12
+					label(for="phone") Телефон
+					input(type="tel", name="phone", id="phone")
+				.col-lg-3.col-md-6.col-xs-12
+					label(for="email") E-mail
+					input(type="email", name="email", id="email")
+			//</Row 3>
+
+			//<Row 4>
+			.row
+				.col-lg-3.col-md-6.col-xs-12
+					.checkbox
+						input(type="checkbox", name="driver", id="driver")
+						label(for="driver") Доп. водитель - бесплатно	
+				.col-lg-3.col-md-6.col-xs-12
+					.checkbox
+						input(type="checkbox", name="gps", id="gps")
+						label(for="gps") Навигатор - €3/сутки	
+				.col-lg-3.col-md-6.col-xs-12
+					.checkbox
+						input(type="checkbox", name="map", id="map")
+						label(for="map") Карта - бесплатно				
+				.col-lg-3.col-md-6.col-xs-12
+					.checkbox
+						input(type="checkbox", name="baby", id="baby")
+						label(for="baby") Детское кресло - бесплатно
+			//</Row 4>
+
+			//<Row 5>
+			.row
+				.col-xs-12
+					textarea(name="rent-comment", id="rent-comment", placeholder="Ваши комментарии", rows="3")
+					button.btn.btn-lg(type="submit") Отправить
+			//</Row 5>
+//</Form>

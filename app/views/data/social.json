@@ -1,0 +1,15 @@
+{
+	"socClass": "social",
+	"socListClass": "soc-nav-list",	
+	"socItemClass": "soc-item",
+	"socItems": [
+		{"icon": "fab fa-vk", "href": "https://vk.com/prokat_paphos"}, 
+		{"icon": "fab fa-facebook-f", "href": "https://facebook.com/arenda.paphos"}
+	],
+	"_socItemsOld": [
+		{"icon": "fab fa-whatsapp", "href": "whatsapp://send?phone=+3579615152"},
+		{"icon": "fab fa-viber", "href": "viber://chat?number=79267338301"},
+		{"icon": "fab fa-vk", "href": "https://vk.com/prokat_paphos"}, 
+		{"icon": "fab fa-facebook-f", "href": "https://facebook.com/arenda.paphos"}
+	]
+}

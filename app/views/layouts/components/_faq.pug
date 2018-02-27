@@ -1,0 +1,35 @@
+// <FAQ>
+- var q = FAQ.questions;
+
+section#faq
+	h2 FAQ
+		span  Нас часто спрашивают
+	.container-fluid
+		.row
+			.col-md-12.col-lg-6
+				.panel-group
+					for i in [0, 1, 2]
+						.panel
+							.panel-heading
+								h4
+									a(href="#question" + i)
+										span.fas.fa-plus
+										| #{q[i].question}
+							.panel-collapse(id="question" + i)
+								.panel-body
+									p #{q[i].response}
+
+			.col-md-12.col-lg-6
+				.panel-group
+					for i in [3, 4, 5]
+						.panel
+							.panel-heading
+								h4
+									a(href="#question" + i)
+										span.fas.fa-plus
+										| #{q[i].question}
+							.panel-collapse(id="question" + i)
+								.panel-body
+									p #{q[i].response}
+									
+// </FAQ>

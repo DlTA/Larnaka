@@ -1,0 +1,143 @@
+#rentForm
+	margin: 0 auto
+	padding: 1rem 1rem 0.5rem
+	background-color: rgba(37,37,37,0.6)
+	width: 95%
+	transform: translateZ(0)
+
+#rentForm.hide
+	max-height: 0
+	padding: 0
+	overflow: hidden
+
+#qForm
+	width: 100%
+	background: 0 0
+
+#rentForm,
+#qForm
+	position: relative
+	height: auto
+
+	i
+		color: rgba(255,255,255, 0.65)
+		font-size: 1.2rem
+
+	caret-color: $accent
+
+	input,
+	select,
+	textarea
+		outline: none
+		margin-bottom: 0.5rem
+		font-size: 0.9rem
+		color: rgba(255,255,255, 0.65)
+		border: 1px solid rgba(255,255,255, 0)
+		background-color: rgba(255,255,255,0.2)
+		transition: border-color ease-in-out 0.15s
+
+	input:not([type="checkbox"]),
+	select,
+	textarea
+		width: 100%
+
+	input:not([type="checkbox"]),
+	select
+		display: inline-block
+		height: 36px
+		line-height: 36px
+
+	input:focus,
+	select:focus,
+	textarea:focus
+		outline: none
+		color: rgba(255,255,255, 0.65) !important
+		border-color: rgba(255,255,255, 0.5)
+		background-color: rgba(37,37,37,0.5)
+		
+	input
+		padding: 0 0.5rem
+
+	select
+		padding-left: 0.5rem
+		appearance: none
+		-moz-appearance: none
+		-webkit-appearance: none
+		cursor: pointer
+		text-transform: none
+		// Remove dotted border from FF select tag
+		&:-moz-focusring
+			color: transparent
+			text-shadow: 0 0 0 $head-font-color
+
+	label
+		display: inline-block
+		color: #fff
+		font-family: $font-bold
+		font-size: 0.85rem
+		margin-bottom: 0.5rem
+		
+	textarea
+		width: 100%
+		padding: 0.5rem
+		overflow: auto
+		resize: none
+
+	.row
+		margin-left: -15px
+		margin-right: -15px
+
+.form-input
+	position: relative
+	width: 100%
+	height: auto
+	i
+		position: absolute
+		top: 50%
+		right: 10px
+		color: #333
+
+.sm
+	&:not(:first-child)
+		padding-left: 0px
+
+	&:not(:last-child)
+		padding-right: 6px
+
+.checkbox
+	
+	label
+		position: relative
+		user-select: none
+		cursor: pointer
+		
+	input[type="checkbox"]
+		display: none
+
+	input[type="checkbox"] + label::before
+		content: ""
+		display: inline-block
+		width: 16px
+		height: 16px
+		margin-right: 0.5remba(255,255,255,0)
+		border: 1px solid rgba(255, 255, 255, 0)
+		background-color: rgba(255,255,255,0.2)
+
+	input[type="checkbox"]:checked + label::after
+		content: ""
+		position: absolute
+		top: 3px
+		left: 6px
+		width: 5px
+		height: 10px
+		border: solid white
+		border-width: 0 2px 2px 0
+		transform: rotate(45deg) 
+
+#qForm
+	textarea,
+	input
+		margin-bottom: 1rem
+
+
+

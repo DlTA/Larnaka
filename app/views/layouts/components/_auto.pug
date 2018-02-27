@@ -1,0 +1,43 @@
+// <Cars>
+mixin car-card(data)
+	.car-card
+		noscript(data-src=data.img, data-alt=data.model)
+			img(src=data.img, alt=data.model)
+		.caption
+			h4 #{data.model}
+			p.price #{data.price}
+				span  / день
+			a(class="btn btn-md" href="#rentForm") Заказать
+			table
+				tbody
+					tr
+						td.engine
+							i(class="fas fa-tachometer-alt")
+							| #{data.engine}
+						td.gear
+							i(class="fas fa-cog")
+							| #{data.gear}
+						td.climat
+							i(class="fas fa-snowflake")
+							| #{data.climat}
+						td.seats
+							i(class="fas fa-male")
+							| #{data.seats}
+section#cars
+	h2 Наш автопарк
+	.container-fluid
+		.tabs
+			span#current-loc.down Ларнака
+			ul.tabs-list
+				for i in [{"city": "Ларнака", "data": "Larnaca"}, {"city": "Aйя-Напа", "data": "AyiaNapa"}, {"city": "Лимасол", "data": "Limassol"}, {"city": "Пафос", "data": "Paphos"}, {"city": "Протарас", "data": "Protaras"}]
+					li
+						if i.city === "Ларнака"
+							a(class="active" href="#" data-location=i.data) #{i.city}
+						else
+							a(href="#" data-location=i.data) #{i.city}
+		.car-wrapper
+			.row
+				for car in AUTO.cars
+					.col-lg-3.col-md-4.col-sm-6.col-xs-12
+						+car-card(car)
+// </Cars>

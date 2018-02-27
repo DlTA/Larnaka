@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+	//- Head
+	head
+		block head
+			include components/_head.pug
+	//- Body
+	body
+		// <Wrapper>
+		#wrapper
+			//- Header
+			block header
+				include components/_header.pug
+			//- Main content
+			block content
+				include components/_content.pug
+			//- Footer
+			block footer
+				include components/_footer.pug
+		// </Wrapper>
+		// JS
+		script.
+			// Hide rent form on mobile
+			var rentForm = document.getElementById("rentForm"),
+				width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+			width <= 768 ? rentForm.classList.add("hide") : rentForm.classList.remove("hide");
+			
+		script(src="js/main.min.js" async)

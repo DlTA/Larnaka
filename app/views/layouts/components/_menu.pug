@@ -1,0 +1,13 @@
+// <Menu>
+nav(id=NAV.menuId, class=NAV.menuClass)
+	input(type='checkbox', id=NAV.navBtnId)
+	label(for=NAV.navBtnId, class=NAV.navBarsClass)
+		for n in [1, 2, 3]
+			i(class='bar-' + n)
+	// <Nav>
+	ul(class=NAV.navListClass)
+		each item in NAV.navItems
+			li
+				a(href=item.href, class=NAV.navItemClass) #{item.text}
+	// </Nav>
+// </Menu>

@@ -1,0 +1,253 @@
+@import "vars"
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.header-wrap
+		background-image: url('/img/bg-1024.jpg')
+	// == CARS
+	.tabs-list
+		li
+			a
+				padding: 1rem 3rem
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	// == HEADER
+	.#{$navListClass}
+		li
+			.#{$navItemClass}
+				padding: 0 0.85rem
+	//  == CONTENT
+	.header-wrap
+		h1
+			padding: 30px 0 15px 75px
+			font-size: 2.5rem
+			span
+				line-height: 2rem
+	// == CARS
+	.car-wrapper
+		.row
+			margin: 0
+	.tabs-list
+		li
+			a
+				padding: 1rem 2rem
+	// == FAQ
+	#faq
+		padding-bottom: 4rem
+	.panel-group
+		padding: 0
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	// == HEADER
+	.headline,
+	header,
+	.logo
+		height: 40px
+	header
+		padding: 0
+
+	.logo
+		position: absolute
+		line-height: 40px
+		z-index: 1
+
+		&::after
+			display: none
+
+	.social
+		display: none
+
+	// Bars icon
+	.#{$navBarsClass}
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		padding: 10px
+		cursor: pointer
+		z-index: 9999
+		transition: transform .2s ease
+
+		i
+			display: block
+			width: 20px
+			height: 2px
+			border-radius: 1px
+			margin: 4px auto 0
+			background-color: $head-font-color
+
+		&:hover
+			background: 0 0
+					
+	// Menu
+	.#{$menuClass}
+		width: 100%
+		line-height: 1
+		background-color: $primary
+	// Nav 
+	.#{$navListClass}
+		position: relative
+		top: 40px
+		width: 100%
+		max-height: 0
+		background-color: inherit
+
+		li
+			.#{$navItemClass}
+				display: block
+				width: 100%
+				padding: 1.25rem 0
+				background-color: inherit
+
+	// == CONTENT
+	.header-wrap
+		min-height: 0
+		margin-top: 40px
+		background-image: none
+		background-color: #fbfbfb
+		&::before
+			display: none
+
+		h1
+			display: block
+			padding: 15px 0 15px 30px
+			font-size: 2rem
+
+			background-image: url('/img/bg-720.jpg')
+			background-position: center center
+			background-repeat: no-repeat
+			background-attachment: scroll
+			background-size: cover
+			-moz-background-size: cover
+			-webkit-background-size: cover
+			span
+				font-size: 1.5rem
+
+	// == FORM
+	#rentForm
+		i
+			color: $font-color
+
+		background-color: inherit
+		label
+			color: $head-font-color
+		input,
+		select,
+		textarea,
+		input[type="checkbox"] + label::before
+			color: $font-color
+			border: 1px solid lightgrey
+			background-color: rgba(255,255,255,0.7)
+
+		input:focus,
+		select:focus,
+		textarea:focus
+			outline: none
+			color: $font-color !important
+			border-color: rgba(37,37,37, 0.3)
+			background-color: rgba(255,255,255,1)
+
+		input[type="checkbox"] + label::before
+			width: 20px
+			height: 20px
+
+		input[type="checkbox"]:checked + label::after
+			border: solid $font-color
+			border-width: 0 1px 1px 0
+			left: 7px
+			width: 6px
+			height: 12px
+
+	// == Bonus Box
+	.bonus
+		padding: 0
+
+	// == CARS
+	#current-loc
+		display: block
+
+	.tabs-list
+		position: absolute
+		top: 3.4rem
+		left: 0
+		right: 0
+		z-index: 100
+		max-height: 0
+
+		li
+			a
+				display: block
+				margin: 0 auto
+				width: 90%
+				padding: 1rem
+				font-size: 1.1rem
+
+	// == FOOTER
+	footer
+		.filial-list
+			padding-left: 4rem
+		.#{$socListClass}
+			padding-left: 5rem
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	#faq,
+	#reviews,
+	#cars,
+	#about
+		[class^="col"]
+			padding: 0
+	
+	// == FAQ
+	#faq
+		.row
+			margin: 0
+		h2
+			padding: 1.5rem 0
+
+	.panel
+		margin: 1rem 0
+
+	.panel-heading
+		padding-left: 10px
+		line-height: 1.1
+
+	// == REVIEWS
+	.item
+		margin: 0
+
+	// == FOOTER
+	footer
+		.filial-list
+			padding-left: 25%
+
+		.#{$socListClass}
+			padding: 0
+			text-align: center
+
+	#qForm
+		padding-bottom: 1rem
+		button
+			margin: 0 auto 1rem
+
+@media only screen and (max-width : 320px)
+	.header-wrap
+		h1
+			font-size: 1.5rem
+			line-height: 1.2
+			span
+				font-size: 1.2rem
+	.review
+		i
+			&::before
+				font-size: 1rem
+				padding-left: 0.5rem
+
+	// == FAQ
+	#faq
+		padding-bottom: 1rem
+

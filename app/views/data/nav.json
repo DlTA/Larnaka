@@ -1,0 +1,15 @@
+{
+	"navBtnId": "nav-btn",
+	"navBarsClass": "bars",
+	"menuId": "menu",
+	"menuClass": "menu",
+	"navListClass": "nav-list",
+	"navItemClass": "nav-item",
+	"navItems": [
+		{"text": "О нас", "href": "#about"}, 
+	    {"text": "Автопарк", "href": "#cars"}, 
+	    {"text": "Отзывы", "href": "#reviews"},
+	    {"text": "Контакты", "href": "#contacts"},
+	    {"text": "FAQ", "href": "#faq"}
+	]
+}

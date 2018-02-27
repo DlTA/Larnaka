@@ -1,0 +1,61 @@
+//  == Mixins
+@import variables
+
+=clearfix()
+	&::before,
+	&::after
+		content: ''
+		display: table
+	&::after
+		clear: both
+		
+// For each breakpoint, define the maximum width of the container in a media query
+=make-container-max-widths($max-widths: $container-max-widths)
+	@each $breakpoint, $container-max-width in $max-widths
+		+media-breakpoint-up($breakpoint)
+			max-width: $container-max-width
+
+=make-container($gutter: $grid-gutter-width)
+	padding-left: $gutter/2
+	padding-right: $gutter/2
+	margin-right: auto
+	margin-left: auto
+	+clearfix
+
+=make-row($gutter: $grid-gutter-width)
+	margin-right: $gutter/2
+	margin-left: $gutter/2
+	+clearfix
+
+=make-col($gutter: $grid-gutter-width)
+	position: relative
+	float: left
+	min-height: 1px
+	padding-left: $gutter/2
+	padding-right: $gutter/2
+
+=make-col-span($size, $columns: $grid-columns)
+	width: percentage($size / $columns)
+
+=make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints)
+	// Common properties for all breakpoints
+	%grid-column
+		position: relative
+		min-height: 1px
+		padding-left: $gutter/2
+		padding-right: $gutter/2
+
+	$breakpoint-counter: 0
+	@each $breakpoint in map-keys($breakpoints)
+		$breakpoint-counter: ($breakpoint-counter + 1)
+		@for $i from 1 through $columns
+			.col-#{$breakpoint}-#{$i}
+				@extend %grid-column
+		
+		+media-breakpoint-up($breakpoint)
+			%grid-column-float-#{$breakpoint}
+				float: left
+			@for $i from 1 through $columns
+				.col-#{$breakpoint}-#{$i}
+					+make-col-span($i, $columns)
+					@extend %grid-column-float-#{$breakpoint}

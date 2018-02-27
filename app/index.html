@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Аренда автомобилей на Кипре</title>
+    <meta name="description" content="Аренда автомобилей на Кипре">
+    <meta name="keywords" content="аренда, автомобилей, Кипр, Ларнака">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#fff">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#fff">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#e60000">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <!-- <Wrapper>-->
+    <div id="wrapper">
+      <!-- <Header>-->
+      <div class="headline">
+        <header>
+          <div class="logo">
+            <p>Logo</p>
+          </div>
+          <!-- <Menu>-->
+          <nav class="menu" id="menu">
+            <input type="checkbox" id="nav-btn">
+            <label class="bars" for="nav-btn"><i class="bar-1"></i><i class="bar-2"></i><i class="bar-3"></i>
+            </label>
+            <!-- <Nav>-->
+            <ul class="nav-list">
+              <li><a class="nav-item" href="#about">О нас</a></li>
+              <li><a class="nav-item" href="#cars">Автопарк</a></li>
+              <li><a class="nav-item" href="#reviews">Отзывы</a></li>
+              <li><a class="nav-item" href="#contacts">Контакты</a></li>
+              <li><a class="nav-item" href="#faq">FAQ</a></li>
+            </ul>
+            <!-- </Nav>-->
+          </nav>
+          <!-- </Menu>-->
+          <!-- <Social Nav>-->
+          <div class="social">
+            <ul class="soc-nav-list">
+              <li><a class="soc-item" href="https://vk.com/prokat_paphos"><i class="fab fa-vk"></i></a></li>
+              <li><a class="soc-item" href="https://facebook.com/arenda.paphos"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+          </div>
+          <!-- </Social Nav>-->
+        </header>
+      </div>
+      <!-- </Header>-->
+      <!-- <Content>-->
+      <main>
+        <div class="header-wrap">
+          <h1>
+             Аренда автомобилей<span> на Kипре в Ларнаке</span></h1>
+          <!-- <Form>-->
+          <section id="form">
+            <div class="container-fluid">
+              <form id="rentForm" method="POST">
+                <!--<Row 1>-->
+                <div class="row">
+                  <!-- City-->
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="cityMenu">Выберите город</label>
+                      <select name="city" id="cityMenu">
+                        <option value="">Айя-Напа</option>
+                        <option value="" selected>Ларнака</option>
+                        <option value="">Лимасол</option>
+                        <option value="">Пафос   </option>
+                        <option value="">Протарас</option>
+                      </select><i class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <!-- Transport-->
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="transportMenu">Транспортное средство</label>
+                      <select name="transport" id="transportMenu">
+                        <option value="" selected>Автомобили</option>
+                      </select><i class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <!-- Model-->
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="modelMenu">Выберите марку</label>
+                      <select name="model" id="modelMenu">
+                        <option value="" disabled selected>&emsp;—</option>
+                      </select><i class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <!-- Place-->
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="placeMenu">Место подачи</label>
+                      <select name="place" id="placeMenu">
+                        <option value="" disabled selected>&emsp;—</option>
+                        <option value="">Аэропорт</option>
+                        <option value="">Отель</option>
+                        <option value="">Другое</option>
+                      </select><i class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- </Row 1>-->
+                <!-- <Row 2>-->
+                <div class="row">
+                  <!-- Check In-->
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="checkInDate">Дата и время начала аренды</label>
+                      <input type="text" name="checkIn" id="checkInDate" readonly><i class="far fa-calendar-alt"></i>
+                    </div>
+                  </div>
+                  <!-- Check Out	-->
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="checkOutDate">Дата и время возврата</label>
+                      <input type="text" name="checkOut" id="checkOutDate" readonly><i class="far fa-calendar-alt"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="row">
+                      <div class="col-xs-4 sm">
+                        <!-- Days-->
+                        <label for="fullDays">Дней</label>
+                        <input type="text" name="days" id="fullDays" readonly>
+                      </div>
+                      <div class="col-xs-4 sm">
+                        <!-- Age-->
+                        <div class="form-input">
+                          <label for="ageMenu">Возраст</label>
+                          <select name="age" id="ageMenu">
+                            <option value="" disabled selected>&emsp;—</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                          </select><i class="fas fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-xs-4 sm">
+                        <!-- Experience-->
+                        <div class="form-input">
+                          <label for="expMenu">Стаж</label>
+                          <select name="exp" id="expMenu">
+                            <option value="" disabled selected>&emsp;—</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                          </select><i class="fas fa-caret-down"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="form-input">
+                      <label for="insuranceMenu">Тип страхования</label>
+                      <select name="insurance" id="insuranceMenu">
+                        <option value="" disabled selected>&emsp;—</option>
+                      </select><i class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+                </div>
+                <!--</Row 2>-->
+                <!--<Row 3>-->
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" name="surname" id="surname">
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name">
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone" id="phone">
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                  </div>
+                </div>
+                <!--</Row 3>-->
+                <!--<Row 4>-->
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="checkbox">
+                      <input type="checkbox" name="driver" id="driver">
+                      <label for="driver">Доп. водитель - бесплатно	</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="checkbox">
+                      <input type="checkbox" name="gps" id="gps">
+                      <label for="gps">Навигатор - €3/сутки	</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="checkbox">
+                      <input type="checkbox" name="map" id="map">
+                      <label for="map">Карта - бесплатно				</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="checkbox">
+                      <input type="checkbox" name="baby" id="baby">
+                      <label for="baby">Детское кресло - бесплатно</label>
+                    </div>
+                  </div>
+                </div>
+                <!--</Row 4>-->
+                <!--<Row 5>-->
+                <div class="row">
+                  <div class="col-xs-12">
+                    <textarea name="rent-comment" id="rent-comment" placeholder="Ваши комментарии" rows="3"></textarea>
+                    <button class="btn btn-lg" type="submit">Отправить</button>
+                  </div>
+                </div>
+                <!--</Row 5>-->
+              </form>
+            </div>
+          </section>
+          <!--</Form>-->
+        </div>
+        <div class="container-fluid">
+          <div class="row bonus-box">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="bonus">
+                <div class="bonus-icon"><i class="fas fa-euro-sign"></i></div>
+                <h4>Без предоплаты</h4>
+                <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="bonus">
+                <div class="bonus-icon"><i class="fas fa-thumbs-up"></i></div>
+                <h4>Без залога</h4>
+                <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="bonus">
+                <div class="bonus-icon"><i class="fas fa-umbrella"></i></div>
+                <h4>Полная страховка</h4>
+                <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="bonus">
+                <div class="bonus-icon"><i class="fas fa-car"></i></div>
+                <h4>Новые автомобили</h4>
+                <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <Cars>-->
+        <section id="cars">
+          <h2>Наш автопарк</h2>
+          <div class="container-fluid">
+            <div class="tabs"><span class="down" id="current-loc">Ларнака</span>
+              <ul class="tabs-list">
+                <li><a class="active" href="#" data-location="Larnaca">Ларнака</a>
+                </li>
+                <li><a href="#" data-location="AyiaNapa">Aйя-Напа</a>
+                </li>
+                <li><a href="#" data-location="Limassol">Лимасол</a>
+                </li>
+                <li><a href="#" data-location="Paphos">Пафос</a>
+                </li>
+                <li><a href="#" data-location="Protaras">Протарас</a>
+                </li>
+              </ul>
+            </div>
+            <div class="car-wrapper">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car1.jpg" data-alt="Chevrolet Cruze"><img src="/img/car1.jpg" alt="Chevrolet Cruze"></noscript>
+                            <div class="caption">
+                              <h4>Chevrolet Cruze</h4>
+                              <p class="price">€50<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>1.6</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>АКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Да</td>
+                                    <td class="seats"><i class="fas fa-male"></i>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car2.jpg" data-alt="Suzuki Jimny Soft Top"><img src="/img/car2.jpg" alt="Suzuki Jimny Soft Top"></noscript>
+                            <div class="caption">
+                              <h4>Suzuki Jimny Soft Top</h4>
+                              <p class="price">€35<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>1.4</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>MКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Нет</td>
+                                    <td class="seats"><i class="fas fa-male"></i>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car3.jpg" data-alt="Honda Jazz"><img src="/img/car3.jpg" alt="Honda Jazz"></noscript>
+                            <div class="caption">
+                              <h4>Honda Jazz</h4>
+                              <p class="price">€20<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>1.8</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>АКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Да</td>
+                                    <td class="seats"><i class="fas fa-male"></i>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car4.jpg" data-alt="Nissan Lafesta"><img src="/img/car4.jpg" alt="Nissan Lafesta"></noscript>
+                            <div class="caption">
+                              <h4>Nissan Lafesta</h4>
+                              <p class="price">€65<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>2.0</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>АКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Да</td>
+                                    <td class="seats"><i class="fas fa-male"></i>7</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car1.jpg" data-alt="Chevrolet Cruze"><img src="/img/car1.jpg" alt="Chevrolet Cruze"></noscript>
+                            <div class="caption">
+                              <h4>Chevrolet Cruze</h4>
+                              <p class="price">€50<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>1.6</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>АКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Да</td>
+                                    <td class="seats"><i class="fas fa-male"></i>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car2.jpg" data-alt="Suzuki Jimny Soft Top"><img src="/img/car2.jpg" alt="Suzuki Jimny Soft Top"></noscript>
+                            <div class="caption">
+                              <h4>Suzuki Jimny Soft Top</h4>
+                              <p class="price">€35<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>1.4</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>MКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Да</td>
+                                    <td class="seats"><i class="fas fa-male"></i>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car3.jpg" data-alt="Honda Jazz"><img src="/img/car3.jpg" alt="Honda Jazz"></noscript>
+                            <div class="caption">
+                              <h4>Honda Jazz</h4>
+                              <p class="price">€20<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>1.8</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>АКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Нет</td>
+                                    <td class="seats"><i class="fas fa-male"></i>4</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                          <div class="car-card">
+                            <noscript data-src="/img/car4.jpg" data-alt="Nissan Lafesta"><img src="/img/car4.jpg" alt="Nissan Lafesta"></noscript>
+                            <div class="caption">
+                              <h4>Nissan Lafesta</h4>
+                              <p class="price">€65<span> / день</span></p><a class="btn btn-md" href="#rentForm">Заказать</a>
+                              <table>
+                                <tbody>
+                                  <tr>
+                                    <td class="engine"><i class="fas fa-tachometer-alt"></i>2.0</td>
+                                    <td class="gear"><i class="fas fa-cog"></i>АКПП</td>
+                                    <td class="climat"><i class="fas fa-snowflake"></i>Да</td>
+                                    <td class="seats"><i class="fas fa-male"></i>7</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- </Cars>-->
+        <!-- <Reviews>-->
+        <section id="reviews">
+          <h2>Отзывы клиентов</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="owl-carousel" id="owl-reviews">
+                          <div class="item">
+                            <div class="review">
+                              <div class="review-img">
+                                <noscript data-src="/img/review1.jpg" data-alt=""><img src="/img/review1.jpg" alt=""></noscript>
+                              </div><i class="fas fa-quote-left"></i>
+                              <p class="u-name">Евлампий </p>
+                              <p class="review-text">Спасибо вашей компании за удобную и выгодную аренду автомобиля) за 3 дня накатали почти 1000 км, объездили всю южную часть острова, ездили в Полис, в горы и на дикие пляжи - машина нигде не подвела. Буду рекомендовать вашу компанию!</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="review">
+                              <div class="review-img">
+                                <noscript data-src="/img/review2.jpg" data-alt=""><img src="/img/review2.jpg" alt=""></noscript>
+                              </div><i class="fas fa-quote-left"></i>
+                              <p class="u-name">Евлампий </p>
+                              <p class="review-text">Хотелось бы выразить благодарность вашей прокатной компании за предоставленные велосипеды в аренду для всей нашей семьи (два взрослых и двое детей). Отдыхали на Кипре 2 недели и решили покататься на велосипедах, взяли в аренду 4 байка на 5 дней - объехали весь город Пафос вдоль и поперек :) Байки были в хорошем состоянии, нам очень понравилось. Теперь знаем куда обращаться, если потребуется аренда на Кипре в г.Пафосе! P.S.: благодарим за предоставленную скидочку - нам хватило на сувенирчики :-)</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="review">
+                              <div class="review-img">
+                                <noscript data-src="/img/review3.jpg" data-alt=""><img src="/img/review3.jpg" alt=""></noscript>
+                              </div><i class="fas fa-quote-left"></i>
+                              <p class="u-name">Евлампий </p>
+                              <p class="review-text">Никогда не думал, что так быстро привыкну к правому рулю - спасибо за подбор маленького, юркого маневренного автомобильчика и тестовую поездку c кратким инструктажем.</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="review">
+                              <div class="review-img">
+                                <noscript data-src="/img/review1.jpg" data-alt=""><img src="/img/review1.jpg" alt=""></noscript>
+                              </div><i class="fas fa-quote-left"></i>
+                              <p class="u-name">Евлампий </p>
+                              <p class="review-text">Большое спасибо вам за предоставленный в аренду автомобиль - встреча в аэропорту точно по графику, никаких заморочек с приемом/передачей автомобиля и никаких предоплат! Супер! С помощью Вас нам удалось отлично провести время на отдыхе: мы побывали во множестве красивых мест, ездили в Акамас на Черепаший пляж, посетили настоящие традиционные кипрские таверны. Мы с супругой остались очень довольны, так держать!</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="review">
+                              <div class="review-img">
+                                <noscript data-src="/img/review2.jpg" data-alt=""><img src="/img/review2.jpg" alt=""></noscript>
+                              </div><i class="fas fa-quote-left"></i>
+                              <p class="u-name">Евлампий </p>
+                              <p class="review-text">Спасибо огромное за автомобиль. Сработали очень быстро. Авто доставили к подъезду,оформили за пять минут. Решили остаться еще на день,без проблем продлили,деньги отдали при сдачи авто. И еще номер достался крутой</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="review">
+                              <div class="review-img">
+                                <noscript data-src="/img/review3.jpg" data-alt=""><img src="/img/review3.jpg" alt=""></noscript>
+                              </div><i class="fas fa-quote-left"></i>
+                              <p class="u-name">Евлампий </p>
+                              <p class="review-text">Мы брали автомобиль на 15 дней, остались очень довольны! Посетили кучу мест благодаря авто: Пафос, полуостров Акамас, Полис, Лимассол, Ларнака, Протарас, Айа Напа, прекрасный мыс Греко и многочисленные пляжи по всему Кипру! Спасибо большое, вы лучшие!!</p>
+                            </div>
+                          </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- </Reviews>-->
+        <!-- <About>-->
+        <section id="about">
+          <h2>О нас</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="about-img">
+                  <noscript data-src="/img/about.jpg"><img src="/img/about.jpg" alt=""></noscript>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="about-txt">
+                  <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Все живет пунктуация взгляд переписали последний языкового там толку пор, повстречался запятых власти решила послушавшись, первую от всех это встретил образ! </p>
+                  <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Буквоград несколько имеет он встретил рыбными, диких, свой вопроса залетают назад города жаренные, прямо на берегу.</p>
+                  <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленькая дороге грамматики парадигматическая. Продолжил коварных на берегу использовало меня моей.</p>
+                  <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Рыбного свой текстов гор, безорфографичный своего свою текста взобравшись букв несколько скатился страну, на берегу назад даже! Меня они дал прямо рот взгляд. Парадигматическая ее, заманивший залетают снова пор. Великий, дороге!</p>
+                </div>
+              </div>
+            </div>
+            <div class="row hits-box">
+              <div class="col-xs-12 col-md-2">
+                <div class="hit"><i class="fas fa-chart-line"></i>
+                  <h4>1200</h4>
+                  <p>Дней в бизнесе</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-2">
+                <div class="hit"><i class="fas fa-car"></i>
+                  <h4>110</h4>
+                  <p>Автомобилей в парке</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-2">
+                <div class="hit"><i class="fas fa-heart"></i>
+                  <h4>1500</h4>
+                  <p>Довольных клиентов</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-2">
+                <div class="hit"><i class="fas fa-road"></i>
+                  <h4>412 740</h4>
+                  <p>Километров пробега</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-2">
+                <div class="hit"><i class="fas fa-map-marker-alt"></i>
+                  <h4>100</h4>
+                  <p>Локаций на маршрутах</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-2">
+                <div class="hit"><i class="fas fa-filter"></i>
+                  <h4>75 000</h4>
+                  <p>Литров топлива заправлено</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- </About>-->
+        <!-- <FAQ>-->
+        <section id="faq">
+          <h2>FAQ<span> Нас часто спрашивают</span></h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="panel-group">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4><a href="#question0"><span class="fas fa-plus"></span>Далеко-далеко за словесными горами в стране, гласных?</a></h4>
+                    </div>
+                    <div class="panel-collapse" id="question0">
+                      <div class="panel-body">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Даже, на берегу!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4><a href="#question1"><span class="fas fa-plus"></span>Далеко-далеко за словесными горами в стране, гласных?</a></h4>
+                    </div>
+                    <div class="panel-collapse" id="question1">
+                      <div class="panel-body">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Обеспечивает буквенных прямо текста вскоре!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4><a href="#question2"><span class="fas fa-plus"></span>Lorem ipsum dolor sit amet, consectetur adipisicing?</a></h4>
+                    </div>
+                    <div class="panel-collapse" id="question2">
+                      <div class="panel-body">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="panel-group">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4><a href="#question3"><span class="fas fa-plus"></span>Далеко-далеко за словесными горами в стране?</a></h4>
+                    </div>
+                    <div class="panel-collapse" id="question3">
+                      <div class="panel-body">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Большой коварных себя выйти пунктуация которой путь, заголовок повстречался вопроса.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4><a href="#question4"><span class="fas fa-plus"></span>Далеко-далеко за словесными?</a></h4>
+                    </div>
+                    <div class="panel-collapse" id="question4">
+                      <div class="panel-body">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Заглавных родного, послушавшись, ipsum она, дороге переулка встретил ее он своих, пустился за назад точках?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4><a href="#question5"><span class="fas fa-plus"></span>Далеко-далеко за словесными горами в стране, гласных?</a></h4>
+                    </div>
+                    <div class="panel-collapse" id="question5">
+                      <div class="panel-body">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Букв это агенство приставка которой прямо жизни буквоград!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- </FAQ>-->
+      </main>
+      <!-- </Content>-->
+      <!--<Footer>-->
+      <footer id="contacts">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <!-- <Question form>-->
+              <h4>Возникли вопросы? Мы ответим!</h4>
+              <form id="qForm" method="POST">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input type="text" name="name" id="q-name" placeholder="Ваше имя">
+                  </div>
+                  <div class="col-xs-12">
+                    <input type="tel" name="phone" id="q-phone" placeholder="Телефон">
+                  </div>
+                  <div class="col-xs-12">
+                    <input type="email" name="email" id="q-email" placeholder="E-mail">
+                  </div>
+                  <div class="col-xs-12">
+                    <textarea name="comment" id="comment" placeholder="Ваш вопрос" rows="3"></textarea>
+                    <button class="btn btn-md-2" type="submit">Отправить							</button>
+                  </div>
+                </div>
+              </form>
+              <!-- </Question form>-->
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <!-- <Filials>-->
+              <h4>Мы в других городах</h4>
+              <ul class="filial-list">
+                <li><i class="fas fa-map-marker-alt"></i><a href="#">Aйя-Напа</a></li>
+                <li><i class="fas fa-map-marker-alt"></i><a href="#">Лимасол</a></li>
+                <li><i class="fas fa-map-marker-alt"></i><a href="#">Пафос</a></li>
+                <li><i class="fas fa-map-marker-alt"></i><a href="#">Протарас</a></li>
+              </ul>
+              <!-- </Filials>-->
+              <!-- <Social Links>-->
+              <h4>Мы в соцсетях</h4>
+              <!-- <Social Nav>-->
+              <div class="social">
+                <ul class="soc-nav-list">
+                  <li><a class="soc-item" href="https://vk.com/prokat_paphos"><i class="fab fa-vk"></i></a></li>
+                  <li><a class="soc-item" href="https://facebook.com/arenda.paphos"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+              </div>
+              <!-- </Social Nav>-->
+              <!-- </Social Links>-->
+            </div>
+            <div class="col-xs-12 footer-line">
+              <p>Аренда автомобилей и мототехники на Кипре</p>
+              <p>© 2018 Все права защищены</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--</Footer>-->
+    </div>
+    <!-- </Wrapper>-->
+    <!-- JS-->
+    <script>
+      // Hide rent form on mobile
+      var rentForm = document.getElementById("rentForm"),
+      	width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+      
+      width <= 768 ? rentForm.classList.add("hide") : rentForm.classList.remove("hide");
+      
+    </script>
+    <script src="js/main.min.js" async></script>
+  </body>
+</html>

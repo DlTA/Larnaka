@@ -1,0 +1,97 @@
+//   Menu
+////////////////////////////////////////////////
+.#{$menuClass}
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: auto
+	// background-color: rgba(51,51,51,.35)
+	background-color: #fff
+
+// Bars icon
+##{$navBtnId},
+.#{$navBarsClass}
+	display: none
+
+##{$navBtnId}:checked + .#{$navBarsClass}
+	transform: rotate(45deg)
+	i
+		// +transition(transform .35s ease)
+		&.bar-1
+			transform: translateY(6px) rotate(180deg)		
+		&.bar-2
+			opacity: 0
+		&.bar-3
+			transform: translateY(-6px) rotate(90deg)
+
+##{$navBtnId}:checked ~ .#{$navListClass},
+##{$navBtnId}:checked ~ .#{$socListClass}
+	z-index: 9990
+	transition: max-height .25s ease
+
+	li
+		.#{$navItemClass},
+		.#{$socItemClass}
+			opacity: 1
+			transform: translateY(0)
+
+##{$navBtnId}:checked ~ .#{$navListClass}
+	max-height: 80%
+
+##{$navBtnId}:checked ~ .#{$socListClass}
+	max-height: 20%
+
+//   Nav / Social
+//////////////////////////////////////////////////
+.#{$navListClass},
+.#{$socListClass}
+	float: left
+	margin: 0
+	padding: 0
+	overflow: hidden
+	list-style-type: none
+	
+	li
+		display: inline
+		white-space: nowrap
+
+		.#{$navItemClass},
+		.#{$socItemClass}
+			display: inline-block
+			margin: 0
+			outline: 0
+			color: #a5abb7
+			// color: #14181c
+			text-align: center
+			font-size: 1rem
+			text-decoration: none
+			transition: all 0.2s ease-in-out
+
+			&:hover
+				color: #333
+
+//   Nav
+//////////////////////////////////////////////////
+.#{$navListClass}
+	width: 80%
+	text-align: center
+	// background-color: skyblue
+	li
+		.#{$navItemClass}
+			margin: 0
+			padding: 1.5rem
+			// text-transform: uppercase
+			letter-spacing: 1px
+
+		.active
+
+//   Social Nav
+//////////////////////////////////////////////////
+.#{$socListClass}
+	width: 20%
+	text-align: center
+	// background-color: plum
+	li
+		.#{$socItemClass}
+			padding: 1.5rem 0.25rem

@@ -1,0 +1,12 @@
+{
+	"cars": [
+		{"price": "€50", "model": "Chevrolet Cruze", "engine": "1.6", "gear": "АКПП", "seats": 4, "climat": "Да", "img": "/img/car1.jpg"},
+		{"price": "€35", "model": "Suzuki Jimny Soft Top", "engine": "1.4", "gear": "MКПП", "seats": 4, "climat": "Нет", "img": "/img/car2.jpg"},
+		{"price": "€20", "model": "Honda Jazz", "engine": "1.8", "gear": "АКПП", "seats": 4, "climat": "Да", "img": "/img/car3.jpg"},
+		{"price": "€65", "model": "Nissan Lafesta", "engine": "2.0", "gear": "АКПП", "seats": 7, "climat": "Да", "img": "/img/car4.jpg"},
+		{"price": "€50", "model": "Chevrolet Cruze", "engine": "1.6", "gear": "АКПП", "seats": 4, "climat": "Да", "img": "/img/car1.jpg"},
+		{"price": "€35", "model": "Suzuki Jimny Soft Top", "engine": "1.4", "gear": "MКПП", "seats": 4, "climat": "Да", "img": "/img/car2.jpg"},
+		{"price": "€20", "model": "Honda Jazz", "engine": "1.8", "gear": "АКПП", "seats": 4, "climat": "Нет", "img": "/img/car3.jpg"},
+		{"price": "€65", "model": "Nissan Lafesta", "engine": "2.0", "gear": "АКПП", "seats": 7, "climat": "Да", "img": "/img/car4.jpg"}
+	]
+}

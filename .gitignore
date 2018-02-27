@@ -1,0 +1,10 @@
+/node_modules/
+/.git/
+/gulpfile.js
+/*.json
+/*.txt
+/**/*.psd
+/*.jpg
+/*.png
+/**/Thumbs.db
+/**/*.DS_Store

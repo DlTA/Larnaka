@@ -1,0 +1,75 @@
+//   Menu Btn
+////////////////////////////////////////////////
+##{$navBtnId},
+.#{$navBarsClass}
+	display: none
+
+##{$navBtnId}
+	position: absolute
+
+.#{$navBarsClass}
+	+circle(40px)
+	line-height: 40
+	background-color: inherit
+
+##{$navBtnId}:checked + .#{$navBarsClass}
+	transform: translateZ(0)
+	transform: rotate(45deg)
+	i
+		transition: transform .15s ease-in-out
+
+		&.bar-1
+			transform: translateY(6px) rotate(180deg)		
+		&.bar-2
+			opacity: 0
+		&.bar-3
+			transform: translateY(-6px) rotate(90deg)
+
+##{$navBtnId}:checked ~ .#{$navListClass}
+	z-index: 9990
+	max-height: 480px
+	transition: max-height 0.25s ease-in-out
+	
+	li
+		.#{$navItemClass}
+			border: none
+
+		&:last-child a
+			border-bottom: 1px solid #e9e9e9
+
+//   Menu 
+////////////////////////////////////////////////
+.#{$menuClass}
+	position: relative
+	width: 60%
+	height: auto
+	float: left
+
+.#{$navListClass}
+	height: 100%
+	margin: 0
+	padding: 0
+	overflow: hidden
+	list-style-type: none
+	text-align: center
+
+	li
+		display: inline
+		white-space: nowrap		
+
+		.#{$navItemClass}
+			display: inline-block
+			padding: 0 1.25rem
+			margin: 0
+			height: 100%
+			color: $head-font-color
+			text-align: center
+			text-decoration: none
+			letter-spacing: 1px
+			border-bottom: 4px solid #fff
+			transition: color ease-in-out 0.15s, border ease-in-out 0.15s
+
+			&:hover
+				color: $accent
+				border-bottom: 4px solid $accent
+	

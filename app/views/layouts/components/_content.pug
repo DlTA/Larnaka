@@ -1,0 +1,29 @@
+// <Content>
+main
+	.header-wrap
+		//- h1= SITE.h1
+		h1 
+			| Аренда автомобилей
+			span  на Kипре в Ларнаке
+		//- Form
+		include _form.pug
+	//- Bonuses
+	.container-fluid
+		.row.bonus-box
+			for b in SITE.bonuses
+				.col-xs-12.col-sm-6.col-md-3
+					.bonus
+						.bonus-icon
+							i(class=b.icon)
+						h4 #{b.head}
+						p  #{b.text}
+	//- Auto
+	include _auto.pug
+	//- Reviews
+	include _reviews.pug
+	//- About
+	include _about.pug
+	//- FAQ
+	include _faq.pug
+
+// </Content>

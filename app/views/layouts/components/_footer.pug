@@ -1,0 +1,60 @@
+//<Footer>
+footer#contacts
+	.container
+		.row
+			.col-xs-12.col-sm-6
+				// <Question form>
+				h4 Возникли вопросы? Мы ответим!
+				form#qForm(method="POST")
+					.row
+						.col-xs-12
+							input(type="text", name="name", id="q-name", placeholder="Ваше имя")
+						.col-xs-12
+							input(type="tel", name="phone", id="q-phone", placeholder="Телефон")
+						.col-xs-12
+							input(type="email", name="email", id="q-email", placeholder="E-mail")
+						.col-xs-12
+							textarea(name="comment", id="comment", placeholder="Ваш вопрос", rows="3")
+							button.btn.btn-md-2(type="submit") Отправить							
+				// </Question form>
+			//- .col-xs-12.col-sm-4
+				// <Contacts>
+				h4 Наши контакты
+				ul.contact-list
+					li
+						i.fas.fa-home
+						p #{SITE.contacts.address}
+					li
+						i.fas.fa-phone
+						p #{SITE.contacts.phone}
+					li
+						i.fas.fa-envelope
+						p #{SITE.contacts.email}
+				// </Contacts>
+			.col-xs-12.col-sm-6
+				// <Filials>
+				h4 Мы в других городах
+				ul.filial-list
+					li
+						i.fas.fa-map-marker-alt
+						a(href="#") Aйя-Напа
+					li
+						i.fas.fa-map-marker-alt
+						a(href="#") Лимасол
+					li
+						i.fas.fa-map-marker-alt
+						a(href="#") Пафос
+					li
+						i.fas.fa-map-marker-alt
+						a(href="#") Протарас
+				// </Filials>
+
+				// <Social Links>
+				h4 Мы в соцсетях
+				include _social.pug
+				// </Social Links>
+
+			.col-xs-12.footer-line
+				p Аренда автомобилей и мототехники на Кипре
+				p © 2018 Все права защищены
+//</Footer>
