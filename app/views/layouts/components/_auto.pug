@@ -36,6 +36,11 @@ section#cars
 						else
 							a(href="#" data-location=i.data) #{i.city}
 		.car-wrapper
+			p.discount Цена указана при заказе от 6 дней. Для точного расчета необходимо выбрать автомобиль и заполнить калькулятор.
+				br
+				| Минимальный срок аренды автомобиля - 1 день.
+				br
+				span Скидка 30% действует до 15 апреля 2018
 			.row
 				for car in AUTO.cars
 					.col-lg-3.col-md-4.col-sm-6.col-xs-12

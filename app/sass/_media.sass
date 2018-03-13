@@ -131,7 +131,8 @@
 			color: $font-color
 
 		background-color: inherit
-		label
+		label,
+		.infoForClient
 			color: $head-font-color
 		input,
 		select,
@@ -159,6 +160,11 @@
 			left: 7px
 			width: 6px
 			height: 12px
+
+		button:hover
+			color: $head-font-color
+			font-weight: normal
+			letter-spacing: 1px
 
 	// == Bonus Box
 	.bonus
@@ -190,6 +196,10 @@
 			padding-left: 4rem
 		.#{$socListClass}
 			padding-left: 5rem
+
+	.discount
+		font-size: .9rem
+		line-height: 1.5
 
 
 /* Extra Small Devices, Phones */

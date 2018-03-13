@@ -36,13 +36,32 @@
 					}
 				}
 			});
+			// Flatpickr.js calendar
+			this.flatpickr_cfg = {
+				"locale": "ru",
+				dateFormat: "d.m.Y H:i",
+				minDate: "today",
+				defaultDate: new Date(),
+				enableTime: true,
+				time_24hr: true,
+				onReady: function(rawdate, altdate, instance) {
+					$('<div class="confirmBtn"><i></i><i></i></div>').appendTo('.flatpickr-time').click(function() {
+						instance.close();
+					});
+					$('.flatpickr-time .confirmBtn:eq(1)').remove();
+				}				
+			};
+			this.checkInCalendar = flatpickr("#checkInDate", Object.assign(this.flatpickr_cfg, {
+
+			}));
+			this.checkOutCalendar = flatpickr("#checkOutDate", Object.assign(this.flatpickr_cfg, {
+
+			}));
 			this.setUpListeners();
 			this.loadIMG();
 			// Cute reviews
 			this.reviews.forEach(self.reviewTruncate);
 			// 
-
-
 		},
 
 		setUpListeners: function() {
@@ -85,7 +104,7 @@
 
 		// Tabs handler
 		selectLocation: function(e) {
-			e.preventDefault();
+			// e.preventDefault();
 
 			if (!this.classList.contains("active")){
 				document.querySelector(".tabs-list li a.active").removeAttribute("class");
@@ -167,11 +186,49 @@
 			});
 		},
 
+		/**
+		* @param {String} text  - PopUp message (Ваша заявка принята)
+		*/
+		showPopUp: function(text) {
+			var popUp = document.createElement('div'),
+			popUpMsg = '<div class="popUpMsg"><p>'+ text +'</p></div>';
+
+			popUp.setAttribute('id', 'popUp');
+			popUp.classList.add("popUp");
+			popUp.innerHTML = popUpMsg.trim();
+			document.body.appendChild(popUp);
+
+			setTimeout(function() {
+				document.body.removeChild(document.getElementById('popUp'));
+			}, 2000);
+		},
+
+		/**
+		* @param {String} target - Blank form field
+		* @param {String} msg  - Error message
+		*/
+		showErrMsg: function(target, msg) {
+			var el = document.querySelector('[name='+ target +']'),
+				errorMsg = document.createElement('div');
+
+			// remove last error message
+			document.querySelectorAll('.error').forEach(function(err){
+				err.parentNode.removeChild(err);
+			});
+
+			errorMsg.classList.add('error');
+			errorMsg.innerHTML = msg;
+			el.focus();
+			el.parentNode.appendChild(errorMsg);
+		},
+
 
 	};
 
 	var self = app;
 
 	app.init();
+
+	window.app = app;
 
 })(window, window.document, window.jQuery);
